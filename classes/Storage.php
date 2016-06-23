@@ -46,6 +46,16 @@ class Storage{
 		return null;
 	}
 	
+	/*Function to get a the type from the armor inventory*/
+	public static function getInventoryType($type){
+		foreach(self::getAllInventory() as $key => $armor){
+			if($armor->getLabel() != $type) {
+				continue;
+			}
+			return $armor;
+		}
+		return null;
+	}
 	
 	
 }
