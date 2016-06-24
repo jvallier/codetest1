@@ -11,7 +11,6 @@ abstract class Armor{
 			2 => Hands::getLabel(),
 			3 => Legs::getLabel(),
 			4 => Feet::getLabel(),
-			5 => Shoulders::getLabel()
 		);
 	}
 	
@@ -31,9 +30,6 @@ abstract class Armor{
 				break;
 			case 4:
 				return new Feet();
-				break;
-			case 5:
-				return new Shoulders();
 				break;
 		}
 	}

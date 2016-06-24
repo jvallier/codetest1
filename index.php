@@ -83,7 +83,7 @@ require_once __DIR__.'/core.php';
 								var name = target.data('name');
 								var type = target.data('type');
 								
-								removeInventory(target.data('name'),target.data('type'));
+								removeInventory(target.data('name'));
 
 								var outfitInput = $('.equiped[name='+type+']');
 								
@@ -155,9 +155,9 @@ require_once __DIR__.'/core.php';
 					});
 			});
 			
-			function removeInventory(name,type){
+			function removeInventory(name){
 				$.post("api/removeArmor.php",
-					{name:name,type:type},
+					{name:name},
 					function(data){
 						alert(data.message);
 					},
